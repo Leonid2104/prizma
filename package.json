@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "node index.js"
-
   },
   "keywords": [],
   "author": "",
@@ -28,12 +27,10 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.12.0-alpha.1",
     "ws": "^8.4.2"
-    
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
-  
   "optionalDependencies": {
     "utf-8-validate": "^5.0.8"
   }
