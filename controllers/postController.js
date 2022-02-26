@@ -1,5 +1,5 @@
 const ApiError = require('../error/ApiError')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const config = require('config')
 const fs = require('fs')
 const avaService = require('../services/avaService')

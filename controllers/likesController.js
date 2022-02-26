@@ -1,5 +1,5 @@
 const ApiError = require('../error/ApiError')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const {PostItem,Likes,LikeItem, User, Posts, Followings, FollowingItem} = require('../models/models')
 const createAndUpdate = async(parId, uId) =>  {
