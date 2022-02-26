@@ -33,9 +33,7 @@
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
-  "engines": {
-      "node": "14.x"
-     },
+
   "optionalDependencies": {
     "utf-8-validate": "^5.0.8"
   }
