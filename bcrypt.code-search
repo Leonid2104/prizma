@@ -1,0 +1,23 @@
+# Query: bcrypt
+
+Результаты: 14 - Файлы 6
+
+server\controllers\dialogsContr.js:
+  2: const bcrypt = require('bcryptjs')
+
+server\controllers\followController.js:
+  2: const bcrypt = require('bcryptjs')
+
+server\controllers\likesController.js:
+  2: const bcrypt = require('bcryptjs')
+
+server\controllers\mesController.js:
+  2: const bcrypt = require('bcryptjs') 
+
+server\controllers\postController.js:
+  2: const bcrypt = require('bcryptjs')
+
+server\controllers\userController.js:
+   2: const bcrypt = require('bcryptjs')
+  39:         const hashPassword = await bcrypt.hash(password, 5)
+  72:         let comparePassword = bcrypt.compareSync(password, user.password)
