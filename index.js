@@ -43,9 +43,9 @@ app.use(cors({
   credentials: true,
   origin: "http://localhost:3000"
 }))
+app.use(filePathMiddleware(path.resolve(__dirname,'files')))
 app.use(express.static('files'))
 app.use(express.json())
-app.use(filePathMiddleware(path.resolve(__dirname,'files')))
 app.use('/api', router)
 app.use(errorHandler)
 const start = async () => {

@@ -74,12 +74,15 @@ class PostController {
         
         if(like){
           posts[pos].dataValues.liked = true
+          posts[pos].dataValues.path = req.filePath
         }
         else{
           posts[pos].dataValues.liked = false
+          posts[pos].dataValues.path = req.filePath
         }
       }
       posts.sort((a,b) => b.id - a.id)
+      
       return res.json(posts)
     }catch{
       return res.status(400).json("Error") 
