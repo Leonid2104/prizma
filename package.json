@@ -30,10 +30,10 @@
     "ws": "^8.4.2"
     
   },
-  "engines": {
-    "node": "14.18.1"
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   },
-
+  
   "optionalDependencies": {
     "utf-8-validate": "^5.0.8"
   }
