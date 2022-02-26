@@ -1,7 +1,7 @@
-**/node_modules
+server/node_modules
 
 .idea
 
-files
+server/files
 
-static
+server/static
