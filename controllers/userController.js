@@ -1,5 +1,5 @@
 const ApiError = require('../error/ApiError')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const fileService = require('../services/avaService')
 const{User,Posts,Chats,Followers,Followings,FollowingItem,Avatar,FollowersItem} = require('../models/models')
