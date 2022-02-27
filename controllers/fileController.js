@@ -10,7 +10,7 @@ class avaController {
         const decoded = jwt.verify(token, process.env.SECRET_KEY) 
         const user = await User.findOne({where:{email:decoded.email}})
         const file = await Avatar.create({userId:user.id})
-        await fileService.createDirAva(file)
+        await fileService.createDirAva(req,file)
     }catch(err){
       console.log(err)
       return res.status(400).json('Error')
@@ -43,10 +43,10 @@ class avaController {
         const user = await User.findOne({where:{email:decoded.email}})
         console.log(file)
         const type = file.name.split('.').pop()
-        let path = `${config.get('filePathAva')}\\${user.id}\\${user.id}_avatar.${type}`
+        let path = `${req.filePath}\\avatars\\${user.id}\\${user.id}_avatar.${type}`
         const avatar = await Avatar.findOne({where:{userId: user.id, parent:false}})
         if (avatar){
-          let pathDel = `${config.get('filePathAva')}\\${user.id}\\${user.id}_avatar.${avatar.type}`
+          let pathDel = `${req.filePath}\\avatars\\${user.id}\\${user.id}_avatar.${avatar.type}`
           fs.unlinkSync(pathDel)
           await avatar.destroy()
         }
