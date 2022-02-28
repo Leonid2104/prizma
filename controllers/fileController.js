@@ -73,7 +73,7 @@ class avaController {
         if(!file){
           return res.json(null)
         }
-        let path = `${config.get('filePathAva')}//${file.path}`
+        let path = `${req.filePath}//${file.path}`
         console.log(111111)
         if(fs.existsSync(path)){
           console.log()

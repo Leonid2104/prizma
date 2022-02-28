@@ -28,7 +28,7 @@ const startWs = async () => {
   try{
     await sequelize.authenticate()
     await sequelize.sync()
-    appWs.listen(9000,() =>{console.log('WebSocket started')})
+    appWs.listen(5000,() =>{console.log('WebSocket started')})
   }catch(e){
     console.log(e)
   }
